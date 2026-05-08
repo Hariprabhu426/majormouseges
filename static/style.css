@@ -1,0 +1,193 @@
+/* 🔥 GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+
+/* ========================= */
+/* 🔥 INTRO SCREEN */
+/* ========================= */
+
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0f0c29, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: all 1s ease;
+}
+
+.intro-content {
+    text-align: center;
+}
+
+/* 🖱️ MOUSE LOGO */
+.mouse-logo {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Mouse body */
+.mouse-body {
+    fill: none;
+    stroke: #c084fc;
+    stroke-width: 3;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawMouse 2s ease forwards;
+}
+
+/* Scroll wheel */
+.wheel {
+    fill: #c084fc;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.5s;
+}
+
+/* Divider line */
+.divider {
+    stroke: #c084fc;
+    stroke-width: 2;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawLine 1s ease forwards 1s;
+}
+
+/* TEXT */
+.intro-text {
+    font-size: 2.8rem;
+    color: #c084fc;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 2s;
+}
+
+.tagline {
+    color: #bbb;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 2.5s;
+}
+
+
+/* ========================= */
+/* 🔥 NAVBAR */
+/* ========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.brand {
+    color: #c084fc;
+    font-weight: bold;
+}
+
+
+/* ========================= */
+/* 🔥 STATUS */
+/* ========================= */
+
+.status.running {
+    color: #4ade80;
+}
+
+.status.stopped {
+    color: #f87171;
+}
+
+
+/* ========================= */
+/* 🔥 DASHBOARD */
+/* ========================= */
+
+.dashboard {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+/* 🎥 CAMERA */
+.camera-card {
+    flex: 2;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(192,132,252,0.2);
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* 📊 PANEL */
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* 📦 CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+
+/* 🎮 BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #c084fc, #9333ea);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* ✨ ANIMATIONS */
+/* ========================= */
+
+@keyframes drawMouse {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes drawLine {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+#app {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
